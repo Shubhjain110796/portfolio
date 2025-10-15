@@ -1,0 +1,107 @@
+/* 🌟 Theme Variables */
+:root {
+  --hero-bg: linear-gradient(135deg, #f0f0f0, #e0e0e0); /* light */
+  --hero-text: #222;
+  --hero-accent: #007bff;
+  --hero-btn-bg: #007bff;
+  --hero-btn-hover: #0056d2;
+}
+
+[data-theme="dark"] {
+  --hero-bg: linear-gradient(135deg, #1f1f1f, #333337);
+  --hero-text: #fff;
+  --hero-accent: #00bcd4;
+  --hero-btn-bg: #00bcd4;
+  --hero-btn-hover: #00e5ff;
+}
+
+[data-theme="blue"] {
+  --hero-bg: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  --hero-text: #e6f1ff;
+  --hero-accent: #1da1f2;
+  --hero-btn-bg: #1da1f2;
+  --hero-btn-hover: #00bfff;
+}
+
+/* 🌟 Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background: var(--hero-bg);
+  color: var(--hero-text);
+  padding: 0 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Waving hand animation */
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+[data-theme="blue"] .hero-title {
+color : #FFF 
+}
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.wave {
+  display: inline-block;
+  animation: wave 2s infinite;
+  transform-origin: 70% 70%;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: fadeInUp 1.2s ease forwards;
+  animation-delay: 0.3s;
+}
+
+/* Button */
+.hero-btn {
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--hero-btn-bg);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 1.4s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.hero-btn:hover {
+  background: var(--hero-btn-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}

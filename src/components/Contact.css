@@ -1,0 +1,109 @@
+:root {
+  /* 🌞 Light Theme */
+  --contact-bg: #ffffff;
+  --contact-text: #222;
+  --contact-accent: #007bff;
+  --contact-card-bg: rgba(0, 0, 0, 0.05);
+  --contact-hover-bg: rgba(0, 0, 0, 0.1);
+  --contact-shadow: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  /* 🌙 Dark Theme */
+  --contact-bg: linear-gradient(135deg, #1f1f1f, #333337);
+  --contact-text: #f5f5f5;
+  --contact-accent: #00bcd4;
+  --contact-card-bg: rgba(255, 255, 255, 0.08);
+  --contact-hover-bg: rgba(255, 255, 255, 0.15);
+  --contact-shadow: rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="blue"] {
+  /* 💙 Blue Theme */
+  --contact-bg: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  --contact-text: #e6f1ff;
+  --contact-accent: #1da1f2;
+  --contact-card-bg: rgba(255, 255, 255, 0.08);
+  --contact-hover-bg: rgba(255, 255, 255, 0.15);
+  --contact-shadow: rgba(0, 0, 0, 0.4);
+}
+
+/* 🧭 Contact Section Styles */
+[data-theme="light"] .contact {
+background-color: #ebebeb; 
+}
+.contact {
+  background: var(--contact-bg);
+  color: var(--contact-text);
+  padding: 60px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px var(--contact-shadow);
+  max-width: 700px;
+  margin: 80px auto;
+  text-align: center;
+  transition: all 0.3s ease;
+  margin-top: 14%;
+}
+
+.contact:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px var(--contact-shadow);
+}
+[data-theme="blue"] .contact-title {
+color : #FFF 
+}
+.contact-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.contact-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  margin-bottom: 40px;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.1rem;
+  background: var(--contact-card-bg);
+  padding: 15px 25px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  background: var(--contact-hover-bg);
+  transform: scale(1.03);
+}
+
+.contact-icon {
+  color: var(--contact-accent);
+  width: 24px;
+  height: 24px;
+  transition: color 0.3s ease;
+}
+
+.contact-item a,
+.contact-item span {
+  color: var(--contact-text);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: var(--contact-accent);
+}
